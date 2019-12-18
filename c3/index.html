@@ -1,6 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>C3: The First Free-Form Multiple-Choice Chinese Machine Reading Comprehension Dataset</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52589612-5"></script>
     <script>
@@ -10,9 +25,280 @@
 
   gtag('config', 'UA-52589612-5');
     </script>
+
+    <style>
+
+        p {
+            margin: 0px;
+        }
+
+        a {
+            font-weight: 600;
+            color: #16a085;
+        }
+
+        #title {
+            background-color: #34495e;
+            margin-bottom: -30px;
+        }
+
+            #title #title1 {
+                font-size: 3.0em;
+                text-align: center;
+                font-weight: 600;
+                color: #f5f5f5;
+            }
+
+            #title #title2 {
+                font-size: 1.8em;
+                text-align: center;
+                margin-top: -5px;
+                color: #16a085;
+            }
+
+        .mainbox .boxbody {
+            padding: 20px;
+        }
+
+            .mainbox .boxbody .boxhead {
+                margin: 15px 0px;
+            }
+
+                .mainbox .boxbody .boxhead h2 {
+                    font-size: 1.4em;
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid #ddd;
+                }
+
+        .mainbuttonbox {
+            text-align: center;
+        }
+
+        .mainbutton:hover {
+            background-color: #ecf0f1;
+        }
+
+        .mainbutton {
+            margin: 10px;
+            background-color: #fff;
+            color: #6b6b6b !important;
+            border: 2px solid #6b6b6b;
+            width: 45%;
+            max-width: 200px;
+        }
+
+        #main .sample {
+            margin: 10px 0px;
+        }
+
+            #main .sample tr.problem {
+                background: #ecf0f1;
+            }
+
+            #main .sample td,
+            #main .sample th {
+                text-align: left;
+                vertical-align: middle;
+            }
+    </style>
 </head>
 <body>
-    We will release C3 by the end of this month. Feel free to contact us (c3@dataset.org) if you have any questions. <br> 
-    Early access to the data may be possible upon requests. 
+    <div id="title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="title1">C<sup>3</sup></h1>
+                    <h2 id="title2">Multiple-Choice Chinese Machine Reading Comprehension Dataset</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mainbox">
+                        <div class="boxbody">
+                            <div class="boxhead">
+                                <h2>What is C<sup>3</sup></h2>
+                            </div>
+                            <p>
+                                <b>C<sup>3</sup></b> is the first free-form multiple-<b>C</b>hoice <b>C</b>hinese machine reading <b>C</b>omprehension dataset, containing 13,369 documents (dialogues or more formally written mixed-genre texts) and their associated 19,577 multiple-choice free-form questions collected from Chinese-as-a-second language examinations.
+                            </p>
+                            <ul class="list-unstyled mainbuttonbox"><li><a class="btn mainbutton" href="https://arxiv.org/abs/1904.09679">C<sup>3</sup> paper</a><a class="btn mainbutton" href="https://github.com/nlpdata/c3">Download data</a></li></ul>
+                            <div class="boxhead">
+                                <h2>Sample Problems</h2>
+                            </div>
+                            <table class="table sample">
+                                <tr>
+                                    <th>Original Problems</th>
+                                    <th>English Translations</th>
+                                </tr>
+                                <tr class="problem">
+                                    <td>
+                                        <p>1928年，经徐志摩介绍，时任中国公学校长的胡适聘用了沈从文做讲师，主讲大学一年级的现代文学选修课。</p>
+                                        <p>当时，沈从文已经在文坛上崭露头角，在社会上也小有名气，因此还未到上课时间，教室里就坐满了学生。上课时间到了，沈从文走进教室，看见下面黑压压一片，心里陡然一惊，脑子里变得一片空白，连准备了无数遍的第一句话都堵在嗓子里说不出来了。</p>
+                                        <p>他呆呆地站在那里，面色尴尬至极，双手拧来拧去无处可放。上课前他自以为成竹在胸，所以就没带教案和教材。整整10分钟，教室里鸦雀无声，所有的学生都好奇地等着这位新来的老师开口。沈从文深吸了一口气，慢慢平静了下来，原先准备好的东西也重新在脑子里聚拢，然后他开始讲课了。不过由于他依然很紧张，原本预计一小时的授课内容，竟然用了不到15分钟就讲完了。</p>
+                                        <p>接下来怎么办？他再次陷入了窘境。无奈之下，他只好拿起粉笔在黑板上写道：我第一次上课，见你们人多，怕了。</p>
+                                        <p>顿时，教室里爆发出了一阵善意的笑声，随即一阵鼓励的掌声响起。得知这件事之后，胡适对沈从文大加赞赏，认为他非常成功。</p>
+                                        <p>有了这次经历，在以后的课堂上，沈从文都会告诫自己不要紧张，渐渐地，他开始在课堂上变得从容起来。</p>
+                                    </td>
+                                    <td>
+                                        <p>In 1928, recommended by Hsu Chih-Mo, Hu Shih, who was the president of the previous National University of China, employed Shen Ts’ung-wen as a lecturer of the university who was in charge of teaching the optional course of modern literature.</p>
+                                        <p>At that time, Shen already made himself conspicuous in the literary world and was a little famous in society. For this sake, even before the beginning of class, the classroom was crowded with students. Upon the arrival of class, Shen went into the classroom. Seeing a dense crowd of students sitting beneath the platform, Shen was suddenly startled and his mind went blank. He was even unable to utter the first sentence he had rehearsed repeatedly.</p>
+                                        <p>He stood there motionlessly, extremely embarrassed. He wrung his hands without knowing where to put them. Before class, he believed that he had had a ready plan to meet the situation so he did not bring his teaching plan and textbook. For up to 10 minutes, the classroom was in perfect silence. All the students were curiously waiting for the new teacher to open his mouth. Breathing deeply, he gradually calmed down. Thereupon, the materials he had previously prepared gathered in his mind for the second time. Then he began his lecture. Nevertheless, since he was still nervous, it took him less than 15 minutes to finish the teaching contents he had planned to complete in an hour.</p>
+                                        <p>What should he do next? He was again caught in embarrassment. He had no choice but to pick up a piece of chalk before writing several words on the blackboard: This is the first time I have given a lecture. In the presence of a crowd of people, I feel terrified.</p>
+                                        <p>Immediately, a peal of friendly laughter filled the classroom. Presently, a round of encouraging applause was given to him. Hearing this episode, Hu heaped praise upon Shen, thinking that he was very successful.</p>
+                                        <p>Because of this experience, Shen always reminded himself of not being nervous in his class for years afterwards. Gradually, he began to give his lecture at leisure in class.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q1</b> 第2段中，“黑压压一片”指的是：</p>
+                                        <p>A. 教室很暗</p>
+                                        <p>B. 听课的人多 &#10004;</p>
+                                        <p>C. 房间里很吵</p>
+                                        <p>D. 学生们发言很积极</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q1</b> In paragraph 2, “<i>a dense crowd</i>” refers to</p>
+                                        <p>A. the light in the classroom was dim.</p>
+                                        <p>B. the number of students attending his lecture was large. &#10004;</p>
+                                        <p>C. the room was noisy.</p>
+                                        <p>D. the students were active in voicing their opinions.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q2</b> 沈从文没拿教材，是因为他觉得：</p>
+                                        <p>A. 讲课内容不多</p>
+                                        <p>B. 自己准备得很充分 &#10004;</p>
+                                        <p>C. 这样可以减轻压力</p>
+                                        <p>D. 教材会限制自己的发挥</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q2</b> Shen did not bring the textbook because he felt that</p>
+                                        <p>A. the teaching contents were not many.</p>
+                                        <p>B. his preparation was sufficient. &#10004;</p>
+                                        <p>C. his mental pressure could be reduced in this way.</p>
+                                        <p>D. the textbook was likely to restrict his ability to give a lecture.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q3</b> 看见沈从文写的那句话，学生们：</p>
+                                        <p>A. 急忙安慰他</p>
+                                        <p>B. 在心里埋怨他</p>
+                                        <p>C. 受到了极大的鼓舞</p>
+                                        <p>D. 表示理解并鼓励了他 &#10004;</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q3</b> Seeing the sentence written by Shen, the students</p>
+                                        <p>A. hurriedly consoled him.</p>
+                                        <p>B. blamed him in mind.</p>
+                                        <p>C. were greatly encouraged.</p>
+                                        <p>D. expressed their understanding and encouraged him. &#10004;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q4</b> 上文主要谈的是：</p>
+                                        <p>A. 中国教育制度的发展</p>
+                                        <p>B. 紧张时应如何调整自己</p>
+                                        <p>C. 沈从文第一次讲课时的情景 &#10004;</p>
+                                        <p>D. 沈从文如何从作家转变为教师的</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q4</b> The passage above is mainly about</p>
+                                        <p>A. the development of the Chinese educational system.</p>
+                                        <p>B. how to make self-adjustment if one is nervous.</p>
+                                        <p>C. the situation where Shen gave his lecture for the first time. &#10004;</p>
+                                        <p>D. how Shen turned into a teacher from a writer.</p>
+                                    </td>
+                                </tr>
+                                <tr class="problem">
+                                    <td>
+                                        <p><b>女:</b> 怎么样?买到票了吗?</p>
+                                        <p><b>男:</b> 火车站好多人啊，我排了整整一天的队，等排到我了，他们说没票了，要等过了年才有。</p>
+                                        <p><b>女:</b> 没关系，过了年回来也是一样的。</p>
+                                        <p><b>男:</b> 公司初六就上班了，我怕过了年来不及。要不今年您和我爸来上海过年吧?</p>
+                                        <p><b>女:</b> 我这老胳膊老腿的不想折腾了。</p>
+                                        <p><b>男:</b> 一点儿不折腾，等我帮你们买好票，你们直接过来就行。</p>
+                                    </td>
+                                    <td>
+                                        <p><b>F:</b> How is it going? Have you bought your ticket?</p>
+                                        <p><b>M:</b> There are so many people at the railway station. I have waited in line all day long. However, when my turn comes, they say that there is no ticket left unless the Spring Festival is over.</p>
+                                        <p><b>F:</b> It doesn’t matter. It is all the same for you to come back after the Spring Festival is over.</p>
+                                        <p><b>M:</b> But according to our company’s regulation, I must go to the office on the 6th day of the first lunar month. I’m afraid I have no time to go back after the Spring Festival, so could you and my dad come to Shanghai for the coming Spring Festival?</p>
+                                        <p><b>F:</b> I am too old to endure the travel.</p>
+                                        <p><b>M:</b> It is not difficult at all. After I help you buy the tickets, you can come here directly.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q1</b> 说话人是什么关系?</p>
+                                        <p>A. 父女</p>
+                                        <p>B. 母子 &#10004;</p>
+                                        <p>C. 同学</p>
+                                        <p>D. 同事</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q1</b> What is the relationship between the speakers?</p>
+                                        <p>A. father and daughter.</p>
+                                        <p>B. mother and son. &#10004;</p>
+                                        <p>C. classmates.</p>
+                                        <p>D. colleagues.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q2</b> 男的遇到了什么困难?</p>
+                                        <p>A. 公司不放假</p>
+                                        <p>B. 过年东西贵</p>
+                                        <p>C. 没买到车票 &#10004;</p>
+                                        <p>D. 找不到车站</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q2</b> What difficulty has the male met?</p>
+                                        <p>A. his company does not have a vacation.</p>
+                                        <p>B. things are expensive during the Spring Festival.</p>
+                                        <p>C. he has not bought his ticket. &#10004;</p>
+                                        <p>D. he cannot find the railway station.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q3</b> 男的提出了什么建议?</p>
+                                        <p>A. 让女的来上海 &#10004;</p>
+                                        <p>B. 明天再去排队</p>
+                                        <p>C. 早点儿去公司</p>
+                                        <p>D. 过了年再回家</p>
+                                    </td>
+                                    <td>
+                                        <p><b>Q3</b> What suggestion does the male put forth?</p>
+                                        <p>A. he invites the female to come to Shanghai. &#10004;</p>
+                                        <p>B. he is going to wait in line the next day.</p>
+                                        <p>C. he wants to go to the company as soon as possible.</p>
+                                        <p>D. he is going to go home after the Spring Festival is over.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="boxhead">
+                                <h2>Have Questions?</h2>
+                            </div>
+                            <p>Please contact <a href="mailto:c3@dataset.org">c3@dataset.org</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
