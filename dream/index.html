@@ -103,6 +103,15 @@
                 text-align: center;
                 vertical-align: middle;
             }
+        
+            #main .sample tr.problem {
+                background: #ecf0f1;
+            }
+            #main .sample td,
+            #main .sample th {
+                text-align: left;
+                vertical-align: middle;
+            }       
     </style>
 </head>
 <body>
@@ -131,6 +140,36 @@
                             <ul class="list-unstyled mainbuttonbox"><li><a class="btn mainbutton" href="https://arxiv.org/abs/1902.00164">DREAM paper</a><a class="btn mainbutton" href="https://github.com/nlpdata/dream">Download data & code</a></li></ul>
                             <hr>
                             <p><b>DREAM</b> contains 10,197 multiple choice questions for 6,444 dialogues, collected from English-as-a-foreign-language examinations designed by human experts. DREAM is likely to present significant challenges for existing reading comprehension systems: 84% of answers are non-extractive, 85% of questions require reasoning beyond a single sentence, and 34% of questions also involve commonsense knowledge.</p>
+ 
+                            <div class="boxhead">
+                                <h2><b>Sample Problems</b></h2>
+                            </div>
+                            <table class="table sample">
+                                <tr>
+                                    <b>Dialogue</b>
+                                </tr>
+                                 <tr class="problem">
+                                 	<td>
+                                       <p><b>W:</b> Tom, look at your shoes. How dirty they are! You must clean them.</p>
+                                       <p><b>M:</b> Oh, mum, I just cleaned them yesterday.</p>
+                                       <p><b>W:</b> They are dirty now. You must clean them again.</p>
+                                       <p><b>M:</b> I do not want to clean them today. Even if I clean them today, they will get dirty again tomorrow.</p>
+                                       <p><b>W:</b> All right, then.</p>
+                                       <p><b>M:</b> Mum, give me something to eat, please.</p>
+                                       <p><b>W:</b> You had your breakfast in the morning, Tom, and you had lunch at school.</p>
+                                       <p><b>M:</b> I am hungry again.</p>
+                                       <p><b>W:</b> Oh, hungry? But if I give you something to eat today, you will be hungry again tomorrow.</p>
+                                   </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><b>Q1</b> Why did the woman say that she wouldn’t give him anything to eat?</p>
+                                        <p>A. Because his mother wants to correct his bad habit. &#10004;</p>
+                                        <p>B. Because he had lunch at school.</p>
+                                        <p>C. Because his mother wants to leave him hungry.</p>
+                                    </td>
+                                </tr>
+                            </table>               
 
                             <div class="boxhead">
                                 <h2><b>Report Your Results</b></h2>
