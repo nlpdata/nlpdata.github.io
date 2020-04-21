@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>C3: The First Free-Form Multiple-Choice Chinese MRC Dataset</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52589612-5"></script>
     <script>
@@ -10,8 +25,482 @@
 
   gtag('config', 'UA-52589612-5');
     </script>
+
+    <style>
+        p {
+            margin: 0px;
+			font-size: 1.2em;
+			font-family: Times, "Times New Roman", serif;
+        }		
+        a {
+            font-weight: 600;
+            color: #000000;
+        }	
+		
+        
+        #title {
+            background-color: #000000;
+            margin-bottom: -30px;
+        }
+
+            #title #title1 {
+                font-size: 4em;
+                text-align: center;
+                font-weight: 600;
+                color: #f5f5f5;
+            }
+
+            #title #title2 {
+                font-size: 1.8em;
+                text-align: center;
+                margin-top: -5px;
+                color: #f5f5f5;
+            }
+
+
+
+		.dot {
+			height: 15px;
+			width: 15px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+		}
+
+
+		.color{
+		background-color: #f5f3f7
+		}
+		.deepcolor{
+		background-color: #dad8dd
+		}
+
+        .mainbox .boxbody {
+            padding: 20px;
+        }
+
+            .mainbox .boxbody .boxhead {
+                margin: 15px 0px;
+            }
+
+                .mainbox .boxbody .boxhead h2 {
+                    font-size: 1.6em;
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid #ddd;
+					font-family: Times, "Times New Roman", serif;
+                }
+
+        .mainbuttonbox {
+            text-align: center;
+        }
+
+        .mainbutton:hover {
+            background-color: #ecf0f1;
+        }
+
+        .mainbutton {
+            margin: 10px;
+            background-color: #fff;
+            color: #616062 !important;
+            border: 2px solid #919093;
+            width: 60%;
+            max-width: 200px;
+        }
+
+        #main .sample {
+            margin: 10px 0px;
+        }
+
+            #main .sample tr.problem {
+				background-color: #f5f3f7;
+            }
+
+            #main .sample td{
+			border: none
+			}
+            #main .sample th {
+                text-align: left;
+                vertical-align: middle;
+            }
+			
+		
+			
+	
+			
+    </style>
 </head>
 <body>
-    Coming soon <br> 
+    <div id="title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="title1"style="font-family:cursive;">
+					D <span style="color: #F07673">&middot</span> 
+					i<span style="color: #D3D186">&middot</span> 
+					a<span style="color: #1D9FDB">&middot</span> 
+					l<span style="color: #F07673">&middot</span> 
+					o<span style="color: #D3D186">&middot</span> 
+					g<span style="color: #1D9FDB">&middot</span> 
+					R<span style="color: #F07673">&middot</span> 
+					E</h1>
+					<br>
+                    <h2 id="title2"style="font-family:cursive;">A Dialogue-Based Relation Extraction Dataset</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mainbox">
+                        <div class="boxbody">
+                            <div class="boxhead">
+                                <h2><b>What is DialogRE</sup></b></h2>
+                            </div>
+                            <p>
+                                <b>DialogRE</b> is the first human-annotated dialogue-based relation extraction dataset, containing 1,788 dialogues originating from the complete transcripts of a famous American television situation comedy <a href="https://en.wikipedia.org/wiki/Friends">Friends</a>. We annotate all occurrences of 36 possible relation types that exist between an argument pair in a dialogue.	
+                            </p>
+                            <ul class="list-unstyled mainbuttonbox"><li><a class="btn mainbutton" href="https://arxiv.org/abs/2004.08056v1">DialogRE paper</a><a class="btn mainbutton" href="https://github.com/nlpdata/dialogre">Download data & code</a></li></ul>
+                            <div class="boxhead">
+                                <h2><b>Sample Problems</b></h2>
+                            </div>
+
+							<table class="table sample" style="width: 100%; margin-right: calc(0%)">
+								<tbody>
+									<tr class="problem">
+										<td colspan="4" style="width: 94.795%;">
+										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey Pheebs.<br>
+										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey!<br>
+										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any sign of your <b>brother</b>?<br>
+										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No, but he's always late.<br>
+										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I thought you only met him once?<br>
+										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yeah, I did. I think it sounds y'know big sistery, y'know, `Frank's always late.' <br>
+										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well relax, he'll be here.<br></td>
+									</tr>
+								</tbody>
+							</table>
+							<table style="width: 50%; margin-right: calc(50%)">
+									<tr>
+										<td style="width: 10%;"><r></td>
+										<td style="width: 30%;"><b>Argument pair</b></td>
+										<td style="width: 20%;"><b>Trigger</b></td>
+										<td style="width: 30%;"><b>Relation type</b></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;"></td>
+										<td style="width: 30%;">(Frank, S2)</td>
+										<td style="width: 20%;">brother</td>
+										<td style="width: 30%;">per:siblings</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;"></td>
+										<td style="width: 30%;">(S2, Frank)</td>
+										<td style="width: 20%;">brother</td>
+										<td style="width: 30%;">per:siblings</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;"></td>
+										<td style="width: 30%;">(S2. Pheebs)</td>
+										<td style="width: 20%;">none</td>
+										<td style="width: 30%;">per:alternate_names</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;"></td>
+										<td style="width: 30%;">(S1, Pheebs)</td>
+										<td style="width: 20%;">none</td>
+										<td style="width: 30%;">unanswerable</td>
+									</tr>
+							</table>
+                             <div class="boxhead">
+                                <h2><b>Relation Schema</b></h2>
+                            </div>
+							<table style="width: 100%; margin-right: calc(0%);">
+								<tbody>
+									<tr class="deepcolor" >
+										<td style="width: 10%;"><b>ID</b></td>
+										<td style="width: 15%;"><b>Subject</b></td>
+										<td style="width: 30%;"><b>Relation Type</b></td>
+										<td style="width: 15%;"><b>Object</b></td>
+										<td style="width: 30%;"><b>Inverse Relation</b></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">1</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:positve_impression</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">2</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:negative_impression</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">3</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:acquaintance</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:acquaintance</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">4</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:alumni</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:alumni</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">5</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:boss</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:subordinate</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">6</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:subordinate</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:boss</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">7</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:client</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;"></td>
+									</tr>			
+									<tr class="color">
+										<td style="width: 10%;">8</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:dates</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:dates</td>
+									</tr>									
+									<tr>
+										<td style="width: 10%;">9</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:friends</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:friends</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">10</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:girl/boyfriend</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:girl/boyfriend</td>
+									</tr>		
+									<tr>
+										<td style="width: 10%;">11</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:neighbor</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:neighbor</td>
+									</tr>	
+									<tr class="color">
+										<td style="width: 10%;">12</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:roommate</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:roommate</td>
+									</tr>										
+									<tr>
+										<td style="width: 10%;">13</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:children</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:parents</td>
+									</tr>	
+									<tr class="color">
+										<td style="width: 10%;">14</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:other_family</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:other_family</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">15</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:parents</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:children</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">16</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:siblings</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:siblings</td>
+									</tr>									
+									<tr>
+										<td style="width: 10%;">17</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:spouse</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:spouse</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">18</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:place_of_residence</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">gpe:residents_of_place</td>
+									</tr>	
+									<tr>
+										<td style="width: 10%;">19</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:place_of_birth</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">gpe:births_in_place</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">20</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:visited_place</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">gpe:visitors_of_place</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">21</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:origin</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">22</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:employee_or_member_of</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">org:employees_or_members</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">23</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:schools_attended</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">org:students</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">24</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:works</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">25</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:age</td>
+										<td style="width: 15%;">VALUE</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">26</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:date_of_birth</td>
+										<td style="width: 15%;">VALUE</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">27</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:major</td>
+										<td style="width: 15%;">STRING</td>
+										<td style="width: 30%;"></td>
+									</tr>	
+									<tr class="color">
+										<td style="width: 10%;">28</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:place_of_work</td>
+										<td style="width: 15%;">STRING</td>
+										<td style="width: 30%;"></td>
+									</tr>							
+									<tr>
+										<td style="width: 10%;">29</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:title</td>
+										<td style="width: 15%;">STRING</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">30</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:alternate_names</td>
+										<td style="width: 15%;">NAME/STRING</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">31</td>
+										<td style="width: 15%;">PER</td>
+										<td style="width: 30%;">per:pet</td>
+										<td style="width: 15%;">NAME/STRING</td>
+										<td style="width: 30%;"></td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">32</td>
+										<td style="width: 15%;">GPE</td>
+										<td style="width: 30%;">gpe:residents_of_place</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:place_of_residence</td>
+									</tr>	
+									<tr>
+										<td style="width: 10%;">33</td>
+										<td style="width: 15%;">GPE</td>
+										<td style="width: 30%;">gpe:births_in_place</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:place_of_birth</td>
+									</tr>
+									<tr class="color">
+										<td style="width: 10%;">34</td>
+										<td style="width: 15%;">GPE</td>
+										<td style="width: 30%;">gpe:visitors_of_place</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:visited_place</td>
+									</tr>	
+									<tr>
+										<td style="width: 10%;">35</td>
+										<td style="width: 15%;">ORG</td>
+										<td style="width: 30%;">org:employees_or_members</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:employee_or_member_of</td>
+									</tr>	
+									<tr class="color">
+										<td style="width: 10%;">36</td>
+										<td style="width: 15%;">ORG</td>
+										<td style="width: 30%;">org:students</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">per:schools_attended</td>
+									</tr>
+									<tr>
+										<td style="width: 10%;">37</td>
+										<td style="width: 15%;">NAME</td>
+										<td style="width: 30%;">unanswerable</td>
+										<td style="width: 15%;">NAME/STRING/VALUE</td>
+										<td style="width: 30%;"></td>
+									</tr>									
+								</tbody>
+							</table> 
+                            <div class="boxhead">
+                                <h2><b>Sibling Datasets</b></h2>
+                            </div>
+                            <p>Check <b>DREAM</b> (<a href="https://dataset.org/dream">https://dataset.org/dream</a>) or <b>C<sup>3</sup></b> (<a href="https://dataset.org/c3">https://dataset.org/dream</a>) if you are interested in dialogue-based multiple-choice machine reading comprehension for English or Chinese.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
