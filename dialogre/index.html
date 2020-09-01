@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -74,7 +74,9 @@
 		.deepcolor{
 		background-color: #dad8dd
 		}
-
+        .deepcolor2 {
+            background-color: #e7e5ea
+        }
         .mainbox .boxbody {
             padding: 20px;
         }
@@ -166,336 +168,407 @@
                     <div class="mainbox">
                         <div class="boxbody">
                             <div class="boxhead">
-                                <h2><b>What is DialogRE</sup></b></h2>
+                                <h2><b>What is DialogRE</b></h2>
                             </div>
                             <p>
-                                <b>DialogRE</b> is the first human-annotated dialogue-based relation extraction dataset, containing 1,788 dialogues originating from the complete transcripts of a famous American television situation comedy <a href="https://en.wikipedia.org/wiki/Friends">Friends</a>. We annotate all occurrences of 36 possible relation types that exist between an argument pair in a dialogue. DialogRE is available in English and Chinese.	
+                                <b>DialogRE</b> is the first human-annotated dialogue-based relation extraction dataset, containing 1,788 dialogues originating from the complete transcripts of a famous American television situation comedy <a href="https://en.wikipedia.org/wiki/Friends">Friends</a>. We annotate all occurrences of 36 possible relation types that exist between an argument pair in a dialogue. DialogRE is available in English and Chinese.
                             </p>
                             <ul class="list-unstyled mainbuttonbox"><li><a class="btn mainbutton" href="https://www.aclweb.org/anthology/2020.acl-main.444.pdf">DialogRE paper</a><a class="btn mainbutton" href="https://github.com/nlpdata/dialogre">Download data & code</a></li></ul>
                             <div class="boxhead">
                                 <h2><b>Sample Instances</b></h2>
                             </div>
 
-							<table class="table sample" style="width: 100%; margin-right: calc(0%)">
-								<tbody>
-									<tr class="problem">
-										<td colspan="4" style="width: 94.795%;">
-										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey Pheebs.<br>
-										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey!<br>
-										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any sign of your <b>brother</b>?<br>
-										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No, but he's always late.<br>
-										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I thought you only met him once?<br>
-										S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yeah, I did. I think it sounds y'know big sistery, y'know, `Frank's always late.' <br>
-										S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well relax, he'll be here.<br></td>
-									</tr>
-								</tbody>
-							</table>
-							<table style="width: 50%; margin-right: calc(50%)">
-									<tr>
-										<td style="width: 10%;"><r></td>
-										<td style="width: 30%;"><b>Argument pair</b></td>
-										<td style="width: 20%;"><b>Trigger</b></td>
-										<td style="width: 30%;"><b>Relation type</b></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;"></td>
-										<td style="width: 30%;">(Frank, S2)</td>
-										<td style="width: 20%;">brother</td>
-										<td style="width: 30%;">per:siblings</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;"></td>
-										<td style="width: 30%;">(S2, Frank)</td>
-										<td style="width: 20%;">brother</td>
-										<td style="width: 30%;">per:siblings</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;"></td>
-										<td style="width: 30%;">(S2. Pheebs)</td>
-										<td style="width: 20%;">none</td>
-										<td style="width: 30%;">per:alternate_names</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;"></td>
-										<td style="width: 30%;">(S1, Pheebs)</td>
-										<td style="width: 20%;">none</td>
-										<td style="width: 30%;">unanswerable</td>
-									</tr>
-							</table>
-                             <div class="boxhead">
+                            <table class="table sample" style="width: 100%; margin-right: calc(0%)">
+                                <tbody>
+                                    <tr class="problem">
+                                        <td colspan="4" style="width: 94.795%;">
+                                            S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey Pheebs.<br>
+                                            S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey!<br>
+                                            S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any sign of your <b>brother</b>?<br>
+                                            S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No, but he's always late.<br>
+                                            S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I thought you only met him once?<br>
+                                            S2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yeah, I did. I think it sounds y'know big sistery, y'know, `Frank's always late.' <br>
+                                            S1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well relax, he'll be here.<br>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table style="width: 50%; margin-right: calc(50%)">
+                                <tr>
+                                    <td style="width: 10%;"><r></td>
+                                    <td style="width: 30%;"><b>Argument pair</b></td>
+                                    <td style="width: 20%;"><b>Trigger</b></td>
+                                    <td style="width: 30%;"><b>Relation type</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10%;"></td>
+                                    <td style="width: 30%;">(Frank, S2)</td>
+                                    <td style="width: 20%;">brother</td>
+                                    <td style="width: 30%;">per:siblings</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10%;"></td>
+                                    <td style="width: 30%;">(S2, Frank)</td>
+                                    <td style="width: 20%;">brother</td>
+                                    <td style="width: 30%;">per:siblings</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10%;"></td>
+                                    <td style="width: 30%;">(S2. Pheebs)</td>
+                                    <td style="width: 20%;">none</td>
+                                    <td style="width: 30%;">per:alternate_names</td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 10%;"></td>
+                                    <td style="width: 30%;">(S1, Pheebs)</td>
+                                    <td style="width: 20%;">none</td>
+                                    <td style="width: 30%;">unanswerable</td>
+                                </tr>
+                            </table>
+                            <div class="boxhead">
                                 <h2><b>Relation Schema</b></h2>
                             </div>
-							<table style="width: 100%; margin-right: calc(0%);">
-								<tbody>
-									<tr class="deepcolor" >
-										<td style="width: 10%;"><b>ID</b></td>
-										<td style="width: 15%;"><b>Subject</b></td>
-										<td style="width: 30%;"><b>Relation Type</b></td>
-										<td style="width: 15%;"><b>Object</b></td>
-										<td style="width: 30%;"><b>Inverse Relation</b></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">1</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:positive_impression</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">2</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:negative_impression</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">3</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:acquaintance</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:acquaintance</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">4</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:alumni</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:alumni</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">5</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:boss</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:subordinate</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">6</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:subordinate</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:boss</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">7</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:client</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;"></td>
-									</tr>			
-									<tr class="color">
-										<td style="width: 10%;">8</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:dates</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:dates</td>
-									</tr>									
-									<tr>
-										<td style="width: 10%;">9</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:friends</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:friends</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">10</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:girl/boyfriend</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:girl/boyfriend</td>
-									</tr>		
-									<tr>
-										<td style="width: 10%;">11</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:neighbor</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:neighbor</td>
-									</tr>	
-									<tr class="color">
-										<td style="width: 10%;">12</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:roommate</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:roommate</td>
-									</tr>										
-									<tr>
-										<td style="width: 10%;">13</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:children</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:parents</td>
-									</tr>	
-									<tr class="color">
-										<td style="width: 10%;">14</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:other_family</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:other_family</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">15</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:parents</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:children</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">16</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:siblings</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:siblings</td>
-									</tr>									
-									<tr>
-										<td style="width: 10%;">17</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:spouse</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:spouse</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">18</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:place_of_residence</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">gpe:residents_of_place</td>
-									</tr>	
-									<tr>
-										<td style="width: 10%;">19</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:place_of_birth</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">gpe:births_in_place</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">20</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:visited_place</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">gpe:visitors_of_place</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">21</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:origin</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">22</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:employee_or_member_of</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">org:employees_or_members</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">23</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:schools_attended</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">org:students</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">24</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:works</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">25</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:age</td>
-										<td style="width: 15%;">VALUE</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">26</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:date_of_birth</td>
-										<td style="width: 15%;">VALUE</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">27</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:major</td>
-										<td style="width: 15%;">STRING</td>
-										<td style="width: 30%;"></td>
-									</tr>	
-									<tr class="color">
-										<td style="width: 10%;">28</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:place_of_work</td>
-										<td style="width: 15%;">STRING</td>
-										<td style="width: 30%;"></td>
-									</tr>							
-									<tr>
-										<td style="width: 10%;">29</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:title</td>
-										<td style="width: 15%;">STRING</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">30</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:alternate_names</td>
-										<td style="width: 15%;">NAME/STRING</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">31</td>
-										<td style="width: 15%;">PER</td>
-										<td style="width: 30%;">per:pet</td>
-										<td style="width: 15%;">NAME/STRING</td>
-										<td style="width: 30%;"></td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">32</td>
-										<td style="width: 15%;">GPE</td>
-										<td style="width: 30%;">gpe:residents_of_place</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:place_of_residence</td>
-									</tr>	
-									<tr>
-										<td style="width: 10%;">33</td>
-										<td style="width: 15%;">GPE</td>
-										<td style="width: 30%;">gpe:births_in_place</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:place_of_birth</td>
-									</tr>
-									<tr class="color">
-										<td style="width: 10%;">34</td>
-										<td style="width: 15%;">GPE</td>
-										<td style="width: 30%;">gpe:visitors_of_place</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:visited_place</td>
-									</tr>	
-									<tr>
-										<td style="width: 10%;">35</td>
-										<td style="width: 15%;">ORG</td>
-										<td style="width: 30%;">org:employees_or_members</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:employee_or_member_of</td>
-									</tr>	
-									<tr class="color">
-										<td style="width: 10%;">36</td>
-										<td style="width: 15%;">ORG</td>
-										<td style="width: 30%;">org:students</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">per:schools_attended</td>
-									</tr>
-									<tr>
-										<td style="width: 10%;">37</td>
-										<td style="width: 15%;">NAME</td>
-										<td style="width: 30%;">unanswerable</td>
-										<td style="width: 15%;">NAME/STRING/VALUE</td>
-										<td style="width: 30%;"></td>
-									</tr>									
-								</tbody>
-							</table> 
-			    <div class="boxhead">
+                            <table style="width: 100%; margin-right: calc(0%);">
+                                <tbody>
+                                    <tr class="deepcolor">
+                                        <td style="width: 10%;"><b>ID</b></td>
+                                        <td style="width: 15%;"><b>Subject</b></td>
+                                        <td style="width: 30%;"><b>Relation Type</b></td>
+                                        <td style="width: 15%;"><b>Object</b></td>
+                                        <td style="width: 30%;"><b>Inverse Relation</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">1</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:positive_impression</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">2</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:negative_impression</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">3</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:acquaintance</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:acquaintance</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">4</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:alumni</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:alumni</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">5</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:boss</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:subordinate</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">6</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:subordinate</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:boss</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">7</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:client</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">8</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:dates</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:dates</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">9</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:friends</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:friends</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">10</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:girl/boyfriend</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:girl/boyfriend</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">11</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:neighbor</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:neighbor</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">12</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:roommate</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:roommate</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">13</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:children</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:parents</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">14</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:other_family</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:other_family</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">15</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:parents</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:children</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">16</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:siblings</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:siblings</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">17</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:spouse</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:spouse</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">18</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:place_of_residence</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">gpe:residents_of_place</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">19</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:place_of_birth</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">gpe:births_in_place</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">20</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:visited_place</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">gpe:visitors_of_place</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">21</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:origin</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">22</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:employee_or_member_of</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">org:employees_or_members</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">23</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:schools_attended</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">org:students</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">24</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:works</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">25</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:age</td>
+                                        <td style="width: 15%;">VALUE</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">26</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:date_of_birth</td>
+                                        <td style="width: 15%;">VALUE</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">27</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:major</td>
+                                        <td style="width: 15%;">STRING</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">28</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:place_of_work</td>
+                                        <td style="width: 15%;">STRING</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">29</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:title</td>
+                                        <td style="width: 15%;">STRING</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">30</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:alternate_names</td>
+                                        <td style="width: 15%;">NAME/STRING</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">31</td>
+                                        <td style="width: 15%;">PER</td>
+                                        <td style="width: 30%;">per:pet</td>
+                                        <td style="width: 15%;">NAME/STRING</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">32</td>
+                                        <td style="width: 15%;">GPE</td>
+                                        <td style="width: 30%;">gpe:residents_of_place</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:place_of_residence</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">33</td>
+                                        <td style="width: 15%;">GPE</td>
+                                        <td style="width: 30%;">gpe:births_in_place</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:place_of_birth</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">34</td>
+                                        <td style="width: 15%;">GPE</td>
+                                        <td style="width: 30%;">gpe:visitors_of_place</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:visited_place</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">35</td>
+                                        <td style="width: 15%;">ORG</td>
+                                        <td style="width: 30%;">org:employees_or_members</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:employee_or_member_of</td>
+                                    </tr>
+                                    <tr class="color">
+                                        <td style="width: 10%;">36</td>
+                                        <td style="width: 15%;">ORG</td>
+                                        <td style="width: 30%;">org:students</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">per:schools_attended</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 10%;">37</td>
+                                        <td style="width: 15%;">NAME</td>
+                                        <td style="width: 30%;">unanswerable</td>
+                                        <td style="width: 15%;">NAME/STRING/VALUE</td>
+                                        <td style="width: 30%;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="boxhead">
+                                <h2><b>Baseline Results</b></h2>
+                            </div>
+                            <p><b>V1</b>: The original English version (used in the paper)</p>
+                            <p><b>V2-EN</b>: The updated English version with a few annotation errors fixed (updated on August 2020)</p>
+                            <p><b>V2-CN</b>: The Chinese version (updated on August 2020)</p>
+                            <table style="width: 100%; margin-right: calc(0%);">
+                                <tbody>
+                                    <tr>
+                                        <td class="deepcolor2"></td>
+                                        <td style="text-align:center" colspan="4" class="deepcolor"><b>V1</b></td>
+                                        <td style="text-align:center" colspan="4" class="deepcolor2"><b>V2-EN</b></td>
+                                        <td style="text-align:center" colspan="4" class="deepcolor"><b>V2-CN</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b></b></td>
+                                        <td style="text-align:center" colspan="2" class="color"><b>Dev</b></td>
+                                        <td style="text-align:center" colspan="2"><b>Test</b></td>
+                                        <td style="text-align:center" colspan="2" class="color"><b>Dev</b></td>
+                                        <td style="text-align:center" colspan="2"><b>Test</b></td>
+                                        <td style="text-align:center" colspan="2" class="color"><b>Dev</b></td>
+                                        <td style="text-align:center" colspan="2"><b>Test</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b></b></td>
+                                        <td style="text-align:center" class="color"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center" class="color"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                        <td style="text-align:center" class="color"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center" class="color"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                        <td style="text-align:center" class="color"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center" class="color"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1 (&sigma;)</b></td>
+                                        <td style="text-align:center"><b>F1<sub>c</sub> (&sigma;)</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="color">BERT</td>
+                                        <td style="text-align:center">60.6 (1.2)</td>
+                                        <td style="text-align:center">55.4 (0.9)</td>
+                                        <td style="text-align:center" class="color">58.5 (2.0)</td>
+                                        <td style="text-align:center" class="color">53.2 (1.6)</td>
+                                        <td style="text-align:center">59.4 (0.7)</td>
+                                        <td style="text-align:center">54.7 (0.8)</td>
+                                        <td style="text-align:center" class="color">57.9 (1.0)</td>
+                                        <td style="text-align:center" class="color">53.1 (0.7)</td>
+                                        <td style="text-align:center">63.7 (0.9)</td>
+                                        <td style="text-align:center">59.5 (0.7)</td>
+                                        <td style="text-align:center" class="color">63.2 (0.9)</td>
+                                        <td style="text-align:center" class="color">58.4 (0.8)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="color">BERT<sub>S</sub></td>
+                                        <td style="text-align:center">63.0 (1.5)</td>
+                                        <td style="text-align:center">57.3 (1.2)</td>
+                                        <td style="text-align:center" class="color">61.2 (0.9)</td>
+                                        <td style="text-align:center" class="color">55.4 (0.9)</td>
+                                        <td style="text-align:center">62.2 (1.3)</td>
+                                        <td style="text-align:center">57.0 (1.0)</td>
+                                        <td style="text-align:center" class="color">59.5 (2.1)</td>
+                                        <td style="text-align:center" class="color">54.2 (1.4)</td>
+                                        <td style="text-align:center">65.5 (0.9)</td>
+                                        <td style="text-align:center">61.0 (0.4)</td>
+                                        <td style="text-align:center" class="color">63.5 (0.9)</td>
+                                        <td style="text-align:center" class="color">58.7 (0.9)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="boxhead">
                                 <h2><b>Questions?</b></h2>
                             </div>
                             <p>Please contact <a href="mailto:dialogre@dataset.org">dialogre@dataset.org</a>.</p>
